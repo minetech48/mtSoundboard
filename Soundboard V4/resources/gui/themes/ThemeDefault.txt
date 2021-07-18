@@ -1,0 +1,17 @@
+Theme
+
+font:primary: Arial, 16;
+font:secondary: Arial, 12;
+
+color:menuBackground: 31, 31, 31;
+
+color:background: 96, 96, 96;
+color:highlight: 150, 150, 170;
+color:active: 160, 160, 175;
+
+color:border: $secondary;
+color:borderActive: $secondary;
+color:borderFocused: $secondary;
+
+color:secondary: $black;
+color:text: $white;

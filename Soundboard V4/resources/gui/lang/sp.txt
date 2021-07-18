@@ -1,0 +1,17 @@
+Localization
+
+settingsMenu = "configuracion"
+
+playSound = "Jugar Sonido"
+stopSounds = "Detener Sonidos"
+
+
+setKeybind = "Enlazar Tecla"
+setKeybindActive = "Anular"
+
+soundBind = "Enlazar Sonido"
+boardBind = "Enlazar Tabla"
+
+bind:PushToTalk = "Empujar Para Hablar"
+bind:AudioStopAll = "Detener Sonidos"
+bind:SBPlayCurrent = "Jugar Seleccionado"
