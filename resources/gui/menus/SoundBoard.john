@@ -1,0 +1,96 @@
+GUI;
+
+{Menu(SoundBoard):
+	
+	elements:[
+		#Main Control Buttons#
+		{Button(playSound, -60, 15, 120, 30):
+			alignment:top;
+			
+			text:\$playSound\;
+			
+			onClick:SBPlaySound\\\$SoundBoard.sounds\;
+		}
+		{Button(stopSounds, -60, 50, 120, 30):
+			alignment:top;
+			
+			text:\$stopSounds\;
+			
+			onClick:SBStopSounds;
+		}
+		
+		{Button(soundBinding, -80, 90, 160, 30):
+			alignment:top;
+			
+			toggle:true;
+			
+			text:\$soundBind\;
+			
+			onClick:SBSoundBinding;
+			onRelease:SBSoundBindingR;
+		}
+		{Button(boardBinding, -80, 125, 160, 30):
+			alignment:top;
+			
+			toggle:true;
+			
+			text:\$boardBind\;
+			
+			onClick:SBBoardBinding;
+			onRelease:SBBoardBindingR;
+		}
+		{Button(clearBinding, -80, 160, 160, 30):
+			alignment:top;
+			
+			text:\$clearBinding\;
+			
+			onClick:SBClearBinding;
+		}
+		
+		#Soundboard Lists#
+		{List(boards, 10, 10, -90, -40):
+			constraint:center;
+			
+			listName:soundboards;
+			
+			suffix:\$boardBinds.|ELEMENT|\;
+			
+			onClick:SBSelectBoard\\|ELEMENT|;
+			
+			width:1;
+		}
+		{List(sounds, 10, 10, -90, -40):
+			alignment:top-right;
+			constraint:center;
+			
+			listName:sounds;
+			
+			suffix:\$soundBinds.|ELEMENT|\;
+			
+			onDoubleClick:SBPlaySound\\|ELEMENT|;
+			
+			width:2;
+		}
+		
+		{Button(settingsButton, -65, -15, 130, 30):
+			alignment:center;
+			
+			text:\$settingsMenu\;
+			
+			onClick:GUIShow\\SettingsMenu;
+		}
+		{Button(resetButton, -35, 0, 70, 30):
+			alignment:bottom;
+			
+			text:reset;
+			onClick:GUIReset;
+		}
+		{Textbox(infoBox, 1, 0, 120, 30):
+			alignment:left-bottom;
+			
+			font:secondary;
+			
+			text:\$programNameVersion\;
+		}
+	]
+}

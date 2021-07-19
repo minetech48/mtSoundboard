@@ -1,0 +1,66 @@
+GUI;
+
+{Menu(Settings, 10, 10, -10, -10):
+	
+	elements:[
+		
+		#keybinds#
+		{Textbox(15, 8, 200, 20):
+			text:keyBinds;
+		}
+		{List(keyBindList, 15, 30, 300, 400):
+			listName:keyEventList;
+			
+			prefix:\$bind:|ELEMENT|\;
+			
+			suffix:\$keybindings.|ELEMENT|\;
+		}
+		{Button(15, 432, 200, 35):
+			toggle:true;
+			
+			text:setKeybind;
+			
+			onClick:SBGlobalBinding;
+			onRelease:SBGlobalBindingR;
+		}
+		
+		#audio out#
+		{Textbox(450, 8, 200, 20):
+			text:setAudio;
+		}
+		{List(audioDeviceList, 450, 30, 300, 400):
+			listName:audioDeviceNames;
+		}
+		{Button(760, 35, 120, 30):
+			text:setAudio1;
+			
+			onClick:SetAudio1\\\$SettingsMenu.audioDeviceList\;
+		}
+		{Textbox(760, 70, 160, 20):
+			text:AudioDevice1;
+		}
+		{Button(760, 95, 120, 30):
+			text:setAudio2;
+			
+			onClick:SetAudio2\\\$SettingsMenu.audioDeviceList\;
+		}
+		{Textbox(760, 130, 160, 20):
+			text:AudioDevice2;
+		}
+		
+		#{Button(330, 30, 200, 20):
+			text:test;
+			
+			onClick:$lua print("test");
+			
+		}#
+		
+		{Button(settingsClose, 5, 5, 80, 20):
+			alignment:top-right;
+			
+			text:\$closeMenu\;
+			
+			onClick:GUIHide\\SettingsMenu;
+		}
+	]
+}
