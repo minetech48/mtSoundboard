@@ -1,3 +1,0 @@
-grid based alignment (for settings menu)
-
-mobile app input method
