@@ -1,0 +1,10 @@
+4.0
+	added: option to set audio device
+	added: ability to bind a key to a random sound
+		\if two or more sounds are bound to the same key, a random sound is played
+	added: support for mp3 and ogg files
+	added: support for folders in soundboards (for crazy large boards)
+
+	+some ui normalization
+	+backend improvements to aid further development
+	
