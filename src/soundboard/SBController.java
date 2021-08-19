@@ -249,7 +249,7 @@ public class SBController {
 	}
 	
 	public static void readConfig() {
-		File config = FileIO.getFile("config/SBConfig");
+		File config = FileIO.getFile("config/SBConfig.txt");
 		
 		Scanner in;
 		try {
