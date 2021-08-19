@@ -1,0 +1,7 @@
+resources/config
+resources/logs
+resources/soundboards/*
+todo.txt
+.idea
+out
+SoundboardV4.iml
