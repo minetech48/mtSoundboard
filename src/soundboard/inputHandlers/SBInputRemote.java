@@ -62,7 +62,10 @@ public class SBInputRemote extends SBKeyInput {
 	public void stop() {
 		running = false;
 		try {
-			in.close();
+			if (in != null)
+				in.close();
+			if (ss != null)
+				ss.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

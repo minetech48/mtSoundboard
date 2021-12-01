@@ -1,6 +1,6 @@
-GUI;
-
-{Menu(Settings, 10, 10, -10, -10):
+{Container(10, 10, -10, -10):
+	drawBackground:true;
+	drawBorder:true;
 	
 	elements:[
 		
