@@ -1,6 +1,6 @@
-GUI;
-
-{Menu(SoundBoard):
+{Container(0, 0, 0, 0):
+	drawBackground:true;
+	drawBorder:true;
 	
 	elements:[
 		#Main Control Buttons#

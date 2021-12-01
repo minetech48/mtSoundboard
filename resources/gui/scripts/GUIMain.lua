@@ -1,4 +1,4 @@
 EventBus = luajava.bindClass("engine.core.EventBus")
 
 EventBus:broadcast({"GUILoadData"})
-EventBus:broadcast({"GUIShow", "SoundBoard"})
+EventBus:broadcast({"GUIShow", "MainMenu"})
