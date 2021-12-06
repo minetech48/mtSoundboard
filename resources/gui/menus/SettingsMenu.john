@@ -1,21 +1,35 @@
-{Container(10, 10, -10, -10):
+{Menu(10, 10, -10, -10):
 	drawBackground:true;
 	drawBorder:true;
+}
+
+
+{GridContainer(mainContainer, 0, 0, 0, 0):
+	height:1;
+	width:3;
+	border:20;
+	
+}
+
+
+#keybinds#
+{Container(0, 0, 1, 1):
+	container:mainContainer;
 	
 	elements:[
-		
-		#keybinds#
-		{Textbox(15, 8, 200, 20):
+		{Textbox(0, 0, 200, 20):
 			text:keyBinds;
 		}
-		{List(keyBindList, 15, 30, 300, 400):
+		{List(keyBindList, 0, 25, 0, -40):
 			listName:keyEventList;
 			
 			prefix:\$bind:|ELEMENT|\;
 			
 			suffix:\$keybindings.|ELEMENT|\;
 		}
-		{Button(15, 432, 200, 35):
+		{Button(0, 0, 0, 35):
+			alignment:bottom-left;
+			
 			toggle:true;
 			
 			text:setKeybind;
@@ -23,44 +37,55 @@
 			onClick:SBGlobalBinding;
 			onRelease:SBGlobalBindingR;
 		}
-		
-		#audio out#
-		{Textbox(450, 8, 200, 20):
+	]
+}
+
+#audio output#
+{Container(1, 0, 2, 1):
+	container:mainContainer;
+	
+	elements:[
+		{Textbox(0, 0, 0, 20):
 			text:setAudio;
 		}
-		{List(audioDeviceList, 450, 30, 300, 400):
+		{List(audioDeviceList, 0, 25, 0, -100):
 			listName:audioDeviceNames;
 		}
-		{Button(760, 35, 120, 30):
+		
+		{Textbox(0, 76, 0, 20):
+			alignment:bottom-left;
+			
+			text:AudioDevice1;
+		}
+		{Button(0, 50, 0, 25):
+			alignment:bottom-left;
+			
 			text:setAudio1;
 			
 			onClick:SetAudio1\\\$SettingsMenu.audioDeviceList\;
 		}
-		{Textbox(760, 70, 160, 20):
-			text:AudioDevice1;
+		{Textbox(0, 26, 0, 20):
+			alignment:bottom-left;
+			
+			text:AudioDevice2;
 		}
-		{Button(760, 95, 120, 30):
+		{Button(0, 0, 0, 25):
+			alignment:bottom-left;
+			
 			text:setAudio2;
 			
 			onClick:SetAudio2\\\$SettingsMenu.audioDeviceList\;
 		}
-		{Textbox(760, 130, 160, 20):
-			text:AudioDevice2;
-		}
-		
-		#{Button(330, 30, 200, 20):
-			text:test;
-			
-			onClick:$lua print("test");
-			
-		}#
-		
-		{Button(settingsClose, 5, 5, 80, 20):
-			alignment:top-right;
-			
-			text:\$closeMenu\;
-			
-			onClick:GUIHide\\SettingsMenu;
-		}
 	]
+}
+
+
+
+
+{Button(settingsClose, 5, 5, 80, 20):
+	alignment:top-right;
+	
+	text:\$closeMenu\;
+	
+	onClick:GUIHide\\SettingsMenu;
 }
